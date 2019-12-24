@@ -23,16 +23,16 @@
   "require": {},
   "autoload": {
     "psr-4": {
-        "NetoJose\\Bootstrap4Forms\\": "src/"
+        "Fserving\\Bootstrap4Forms\\": "src/"
     }
   },
   "extra": {
       "laravel": {
           "providers": [
-              "NetoJose\\Bootstrap4Forms\\Bootstrap4FormsServiceProvider"
+              "Fserving\\Bootstrap4Forms\\Bootstrap4FormsServiceProvider"
           ],
           "aliases": {
-              "Form": "NetoJose\\Bootstrap4Forms\\Bootstrap4FormsFacade"
+              "Form": "Fserving\\Bootstrap4Forms\\Bootstrap4FormsFacade"
           }
       }
   }
