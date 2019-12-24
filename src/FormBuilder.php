@@ -1,6 +1,6 @@
 <?php
 
-namespace Fserving\Bootstrap4Forms;
+namespace NetoJose\Bootstrap4Forms;
 
 use Illuminate\Support\ViewErrorBag;
 
@@ -239,7 +239,7 @@ class FormBuilder
         $id = $this->getId();
 
         if (!$disableValidation && $this->errors()->count() > 0) {
-            $class .= $this->errors()->has($this->cleanChar($name)) ? ' is-invalid' : ' is-valid';
+            $class .= $this->errors()->has($name) ? ' is-invalid' : ' is-valid';
         }
 
         $attributes = [
@@ -359,17 +359,6 @@ class FormBuilder
         return '<div ' . $attributes . '>' . $input . $label . $error . '</div>';
     }
 
-    private function cleanChar($string) {
-      $t = $string;
-      $specChars = array(
-        ']' => '', '[' => ''
-      );
-      foreach ($specChars as $k => $v) {
-          $t = str_replace($k, $v, $t);
-      }
-      return $t;
-    }
-
     private function getInputErrorMarkup(string $name): string
     {
         extract($this->get('disableValidation'));
@@ -377,7 +366,7 @@ class FormBuilder
         if ($disableValidation) {
             return '';
         }
-        $name = $this->cleanChar($name);
+
         $error = $this->errors()->first($name);
         if (!$error) {
             return '';
