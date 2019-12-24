@@ -22,17 +22,17 @@
   "minimum-stability": "dev",
   "require": {},
   "autoload": {
-      "psr-4": {
-          "Fserving\\Bootstrap4Forms\\": "src/"
-      }
+    "psr-4": {
+        "NetoJose\\Bootstrap4Forms\\": "src/"
+    }
   },
   "extra": {
       "laravel": {
           "providers": [
-              "Fserving\\Bootstrap4Forms\\Bootstrap4FormsServiceProvider"
+              "NetoJose\\Bootstrap4Forms\\Bootstrap4FormsServiceProvider"
           ],
           "aliases": {
-              "Form": "Fserving\\Bootstrap4Forms\\Bootstrap4FormsFacade"
+              "Form": "NetoJose\\Bootstrap4Forms\\Bootstrap4FormsFacade"
           }
       }
   }
