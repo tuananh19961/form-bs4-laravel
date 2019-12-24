@@ -18,6 +18,8 @@
           "email": "sputinykster@gmail.com"
       }
   ],
+  "version": "3.0.4",
+  "minimum-stability": "dev",
   "require": {},
   "autoload": {
       "psr-4": {
